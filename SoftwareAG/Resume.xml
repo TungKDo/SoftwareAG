@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resume xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PersonalInformation>
+    <FirstName>Ivan</FirstName>
+    <LastName>Petrov</LastName>
+    <Email>IvanPetrov@gmail.com</Email>
+    <PhoneNumber>0872 105 970</PhoneNumber>
+  </PersonalInformation>
+  <WorkExperience>
+    <Title>Software Developer</Title>
+    <Employer>IT company</Employer>
+    <Description>Support</Description>
+    <StartDate>0001-01-01T01:01:00</StartDate>
+    <EndDate>0001-01-01T01:01:00</EndDate>
+  </WorkExperience>
+  <WorkExperience>
+    <Title>Junior Software Developer</Title>
+    <Employer>IXT DT</Employer>
+    <Description>Support</Description>
+    <StartDate>0001-01-01T01:01:00</StartDate>
+    <EndDate>0001-11-01T01:01:00</EndDate>
+  </WorkExperience>
+  <Education>
+    <Subject>Information technology</Subject>
+    <Institution>FMI</Institution>
+    <Description>Major</Description>
+    <StartDate>0001-01-01T01:01:00</StartDate>
+    <EndDate>0001-01-01T01:01:00</EndDate>
+  </Education>
+  <Language>
+    <Name>English</Name>
+    <Level>C1</Level>
+    <Certificate>TOEFL</Certificate>
+  </Language>
+  <Language>
+    <Name>Japanese</Name>
+    <Level>B1</Level>
+    <Certificate>JCIL</Certificate>
+  </Language>
+</Resume>

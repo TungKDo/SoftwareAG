@@ -1,0 +1,116 @@
+﻿@model SoftwareAG.Models.ResumeViewModel
+
+<p><font size="6">EditResume</font></p>
+
+<form asp-controller="Resume" asp-action="EditResume" method="post">
+
+
+
+    <div>Personal Information</div>
+    <label asp-for="PersonalInformation.FirstName"></label>
+    <input asp-for="PersonalInformation.FirstName" value="@Model.PersonalInformation.FirstName" />
+    <span asp-validation-for="PersonalInformation.FirstName" class="text-danger"></span>
+
+    <label asp-for="PersonalInformation.LastName"></label>
+    <input asp-for="PersonalInformation.LastName" value="@Model.PersonalInformation.LastName" />
+    <span asp-validation-for="PersonalInformation.LastName" class="text-danger"></span>
+
+    <label asp-for="PersonalInformation.Email"></label>
+    <input asp-for="PersonalInformation.Email" value="@Model.PersonalInformation.Email" />
+    <span asp-validation-for="PersonalInformation.Email" class="text-danger"></span>
+
+    <label asp-for="PersonalInformation.PhoneNumber"></label>
+    <input asp-for="PersonalInformation.PhoneNumber" value="@Model.PersonalInformation.PhoneNumber" />
+    <span asp-validation-for="PersonalInformation.PhoneNumber" class="text-danger"></span>
+
+
+    <br />
+    <br />
+
+
+    <p><font size="5">Work Experience</font></p>
+    <div id="workexperiences-container">
+
+        @for (int q = 0; q < Model.WorkExperiences.Count; q++)
+        {
+            <div class="workexperience">
+                <text>Title </text>
+                <input asp-for="WorkExperiences[q].Title" value="@Model.WorkExperiences[q].Title" />
+
+                <text>Employer </text>
+                <input asp-for="WorkExperiences[q].Employer" value="@Model.WorkExperiences[q].Employer" />
+
+                <text>Description </text>
+                <input asp-for="WorkExperiences[q].Description" value="@Model.WorkExperiences[q].Description" />
+
+                <text>Start </text>
+                <input asp-for="WorkExperiences[q].StartDate" value="@Model.WorkExperiences[q].StartDate" />
+                <span asp-validation-for="WorkExperiences[q].StartDate" class="text-danger"></span>
+
+                <text>End </text>
+                <input asp-for="WorkExperiences[q].EndDate" value="@Model.WorkExperiences[q].EndDate" />
+                <span asp-validation-for="WorkExperiences[q].EndDate" class="text-danger"></span>
+                <br />
+            </div>
+        }
+    </div>
+    <button id="add-workexperience" type="button">Add Work Experience</button>
+
+    <br />
+    <br />
+    <p><font size="5">Education</font></p>
+    <div id="education-container">
+        @for (int q = 0; q < Model.Education.Count; q++)
+        {
+            <div class="education">
+                <text>Subject </text>
+                <input asp-for="Education[q].Subject" value="@Model.Education[q].Subject" />
+
+                <text>Institution </text>
+                <input asp-for="Education[q].Institution" value="@Model.Education[q].Institution" />
+
+                <text>Description </text>
+                <input asp-for="Education[q].Description" value="@Model.Education[q].Description" />
+
+                <text>Start </text>
+                <input asp-for="Education[q].StartDate" value="@Model.Education[q].StartDate" />
+                <span asp-validation-for="Education[q].StartDate" class="text-danger"></span>
+
+                <text>End </text>
+                <input asp-for="Education[q].EndDate" value="@Model.Education[q].EndDate" />
+                <span asp-validation-for="Education[q].EndDate" class="text-danger"></span>
+                <br />
+            </div>
+        }
+    </div>
+    <button id="add-education" type="button">Add Education</button>
+
+    <br />
+    <br />
+
+    <p><font size="5">Languages</font></p>
+    <div id="languages-container">
+        @for (int q = 0; q < Model.Languages.Count; q++)
+        {
+            <div class="language">
+                <text>Language </text>
+                <input asp-for="Languages[q].Name" value="@Model.Languages[q].Name" />
+
+                <text>Level </text>
+                <input asp-for="Languages[q].Level" value="@Model.Languages[q].Level" />
+
+                <text>Certificate </text>
+                <input asp-for="Languages[q].Certificate" value="@Model.Languages[q].Certificate" />
+                <br />
+            </div>
+        }
+    </div>
+
+    <button id="add-language" type="button">Add Language</button>
+
+    <br />
+    <br />
+
+    <input type="submit" />
+</form>
+

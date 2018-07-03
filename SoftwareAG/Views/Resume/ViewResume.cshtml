@@ -1,0 +1,39 @@
+﻿@model SoftwareAG.Models.ResumeViewModel
+
+<p><font size="10">@Model.PersonalInformation.FirstName @Model.PersonalInformation.LastName</font></p>
+<p>PhoneNumber: @Model.PersonalInformation.PhoneNumber</p>
+<p>Email Address: @Model.PersonalInformation.Email</p>
+
+
+<p><font size="6">Work Experience</font></p>
+@foreach (var job in Model.WorkExperiences)
+{
+    <h3>Title: @job.Title</h3>
+    <p>Employer: @job.Employer</p>
+    <p>Description: @job.Description</p>
+    <p>@job.StartDate.ToString("MM.yyyy") - @job.EndDate.ToString("MM.yyyy")</p>
+    
+}
+
+    <br>
+    <br>
+
+<p><font size="6">Education</font></p>
+@foreach (var education in Model.Education)
+{
+    <p>Specialty: @education.Subject</p>
+    <p>Institution: @education.Institution</p>
+    <p>@education.StartDate.ToString("MM.yyyy") - @education.EndDate.ToString("MM.yyyy")</p>
+    <br>
+}
+    <br>
+    <br>
+
+<p><font size="6">Languages</font></p>
+@foreach (var language in Model.Languages)
+{
+    <p>Language: @language.Name - @language.Level</p>
+    <p>Cetificate: @language.Certificate</p>
+}
+
+<input type="button" value="Edit" onclick="location.href='@Url.Action("EditResume", "Resume")'" />
